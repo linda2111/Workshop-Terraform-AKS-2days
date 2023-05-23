@@ -32,12 +32,11 @@ jobs:
         run: |
           kubectl create secret docker-registry "acr-secret" \
           --namespace "coolapi" \
-          --docker-server=linda2023.azurecr.io \
+          --docker-server="linda2023.azurecr.io" \
           --docker-username="linda2023" \
           --docker-password="RabqBU9zBuY3oy0mh9Puk2ASjoDsJPaf+9yAZaks0/+ACRADupON"
-
-
-
+          
+          
       - name: Deploiement application dans AKS
         run: |      
           cd Kubernetes/Manifests/coolapi          
